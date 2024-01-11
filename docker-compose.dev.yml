@@ -10,4 +10,17 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+      - MONGO_USER=karan
+      - MONGO_PASSWORD=mypassword
+      - SESSION_SECRET=secrect
+      
     command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=karan
+      - MONGO_INITDB_ROOT_PASSWORD=mypassword
+
+  redis:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=karan
+      - MONGO_INITDB_ROOT_PASSWORD=mypassword
